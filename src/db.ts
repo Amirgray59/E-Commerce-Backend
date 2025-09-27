@@ -9,11 +9,11 @@ import { Payment } from "./entities/payment.js";
 
 export const SourceData = new DataSource({
     type:'mariadb',
-    host: process.env.DB_HOST || 'maindb',
-    username: process.env.DB_USER || 'root',
-    password: process.env.DB_PASS || 'NH1vie3S23R3BvV55VfJFykN',
-    database: process.env.DB_NAME || 'gifted_franklin',
-    port:3306,
+    host: process.env.DB_HOST 
+    username: process.env.DB_USER 
+    password: process.env.DB_PASS 
+    database: process.env.DB_NAME 
+    port:process.eng.PORT,
     synchronize:true,
     entities: [User, Product, Category, Inventory, Warehouse, Order, OrderItem, Payment]
 })
